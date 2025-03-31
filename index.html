@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dashboard Trading - NATGAS</title>
+  <link href="https://cdn.maptiler.com/maptiler-sdk-js/latest/maptiler-sdk.css" rel="stylesheet" />
+  <script src="https://cdn.maptiler.com/maptiler-sdk-js/latest/maptiler-sdk.umd.min.js"></script>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <button id="theme-toggle">🌗 Changer de thème</button>
+  <h1>🧠 Mon Dashboard Trading</h1>
+
+  <section id="natgas">
+    <h2>📈 NATGAS</h2>
+    <h3>📝 Notes personnelles</h3>
+    <textarea id="notes-natgas"></textarea>
+    <button onclick="saveNote('notes-natgas')">💾 Sauvegarder</button>
+
+    <h3>📅 Carte interactive mondiale (gaz, flux, info pays)</h3>
+    <div id="map"></div>
+  </section>
+
+  <script>
+    // Notes sauvegardées
+    function saveNote(id) {
+      const val = document.getElementById(id).value;
+      localStorage.setItem(id, val);
+      alert("Note sauvegardée ✅");
+    }
+
+    // Dark / Light Mode
+    const themeToggle = document.getElementById('theme-toggle');
+    themeToggle.addEventListener('click', () => {
+      document.body.classList.toggle('light-mode');
+      const theme = document.body.classList.contains('light-mode') ? 'light' : 'dark';
+      localStorage.setItem('theme', theme);
+    });
+
+    window.onload = () => {
+      // Charger les notes
+      const saved = localStorage.getItem('notes-natgas');
+      if (saved) document.getElementById('notes-natgas').value = saved;
+
+      // Appliquer le thème
+      const savedTheme = localStorage.getItem('theme');
+      if (savedTheme === 'light') document.body.classList.add('light-mode');
+
+      // Carte MapLibre
+      maptilersdk.config.apiKey = 'l3GsRwPIhKwohXEfLiOC';
+      const map = new maptilersdk.Map({
+        container: 'map', // container's id or the HTML element to render the map
+        style: 'https://api.maptiler.com/maps/0195e344-ae50-7f33-bc1b-46535907fbab/style.json?key=l3GsRwPIhKwohXEfLiOC',
+      });
+
+      // Chargement des pays interactifs
+      map.on('load', () => {
+        map.addSource('countries', {
+          type: 'geojson',
+          data: './data/countries.geojson'
+        });
+
+        map.addLayer({
+          id: 'countries-clickable',
+          type: 'fill',
+          source: 'countries',
+          paint: {
+            'fill-color': '#000000',
+            'fill-opacity': 0 // complètement transparent
+          }
+        });
+      });
+    }
+  </script>
+</body>
+</html>

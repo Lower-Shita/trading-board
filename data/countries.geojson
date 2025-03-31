@@ -1,0 +1,136 @@
+{
+    "type": "FeatureCollection",
+    "features": [
+      {
+        "type": "Feature",
+        "properties": {
+          "name": "États-Unis",
+          "info": "1er producteur & exportateur de GNL"
+        },
+        "geometry": {
+          "type": "Polygon",
+          "coordinates": [[
+            [-125, 25], [-125, 49], [-66, 49], [-66, 25], [-125, 25]
+          ]]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "name": "Russie",
+          "info": "2e producteur mondial, export gazoduc & GNL"
+        },
+        "geometry": {
+          "type": "Polygon",
+          "coordinates": [[
+            [30, 41], [30, 70], [180, 70], [180, 41], [30, 41]
+          ]]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "name": "Qatar",
+          "info": "3e exportateur de GNL"
+        },
+        "geometry": {
+          "type": "Polygon",
+          "coordinates": [[
+            [50, 24], [50, 26], [52, 26], [52, 24], [50, 24]
+          ]]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "name": "Allemagne",
+          "info": "Importateur européen majeur"
+        },
+        "geometry": {
+          "type": "Polygon",
+          "coordinates": [[
+            [5, 47], [5, 55], [15, 55], [15, 47], [5, 47]
+          ]]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "name": "Chine",
+          "info": "4e producteur & grand importateur"
+        },
+        "geometry": {
+          "type": "Polygon",
+          "coordinates": [[
+            [75, 18], [75, 53], [135, 53], [135, 18], [75, 18]
+          ]]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "name": "Japon",
+          "info": "Importateur majeur de GNL"
+        },
+        "geometry": {
+          "type": "Polygon",
+          "coordinates": [[
+            [128, 30], [128, 46], [146, 46], [146, 30], [128, 30]
+          ]]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "name": "Iran",
+          "info": "3e producteur mondial"
+        },
+        "geometry": {
+          "type": "Polygon",
+          "coordinates": [[
+            [44, 25], [44, 40], [64, 40], [64, 25], [44, 25]
+          ]]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "name": "Canada",
+          "info": "Producteur/exportateur majeur"
+        },
+        "geometry": {
+          "type": "Polygon",
+          "coordinates": [[
+            [-141, 42], [-141, 70], [-52, 70], [-52, 42], [-141, 42]
+          ]]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "name": "Australie",
+          "info": "2e exportateur mondial de GNL"
+        },
+        "geometry": {
+          "type": "Polygon",
+          "coordinates": [[
+            [113, -44], [113, -10], [154, -10], [154, -44], [113, -44]
+          ]]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "name": "Malaisie",
+          "info": "Exportateur asiatique de GNL"
+        },
+        "geometry": {
+          "type": "Polygon",
+          "coordinates": [[
+            [99, 1], [99, 7], [120, 7], [120, 1], [99, 1]
+          ]]
+        }
+      }
+    ]
+  }
+  
